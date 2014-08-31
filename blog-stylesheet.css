@@ -20,10 +20,11 @@ html {
 	bottom:5px;
 }
 #right{
-	position:fixed;
+	position:relative;
 	text-align:center;
-	width:90%;
-	left:200px;
+	width:85%;
+	left:193px;
+	top:8px;
 }
 #site-title {
 	position:relative;
@@ -60,3 +61,4 @@ html {
 #blog-date {
 	font-size:.75em;
 }
+#blog {}
