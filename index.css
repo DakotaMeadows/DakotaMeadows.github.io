@@ -1,0 +1,18 @@
+html {
+	background: linear-gradient(to bottom right, #ADD8E6, #00008B);
+}
+ul {
+	list-style-type: none;
+	text-align:center;
+	display:inline;
+}
+li {
+	display:inline;
+}
+#ocean {
+	width:75%;
+	height:10%;
+}
+.icon {
+	
+}
