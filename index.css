@@ -32,6 +32,9 @@ a:hover{
 a:visited {
 	color:black;
 }
+p a:visited {
+	color:blue;
+}
 section {
 	text-align:center;
 	position:relative;
