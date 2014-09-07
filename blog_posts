@@ -17,9 +17,10 @@
 			</h1></ul>
 		</header>
 		<section>
-			<p>Title</p>
-			<p>Date</p>
-			<p>writing</p>
+			<p>Blog Posts</p>
+			<p>September 6, 2014</p>
+			<p><a href="DakotaMeadows.github.io/blog-posts/c1-chefs-kitchen.html">Chef's Kitchen</a><br><a href="DakotaMeadows.github.io/blog-posts/t1-compare-websites.html">Compare Websites</a><br><a href="DakotaMeadows.github.io/blog-posts/week2_technical.html">CSS Positioning</a>
+			</p>
 		</section>
 		<footer>
 			<ul>
