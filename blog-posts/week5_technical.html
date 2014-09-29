@@ -38,7 +38,7 @@
 				<p><span id="blog-title">Ruby Classes</span></p>
 				<p><span id="blog-date">September 28, 2014</span></p>
 				<br>
-				<p><span id="blog">In this post, we're going to talk about classes and the different way of calling class methods and variables. Here's a simple class about a couch, with three properties (height, length, width):
+				<p><span id="blog">In this post, we're going to talk about classes and the different way of calling class methods and variables. Here's a simple class about a couch, with three properties (height, length, width). See if you can follow along:
 					<pre>
 						class Couch
 
@@ -49,20 +49,38 @@
 							end
 
 							def get_height
-								@height
+								puts @height
 							end
 
 							def get_length
-								@length
+								puts @length
 							end
 
 							def get_width
-								@width
+								puts @width
+							end
+
+							def get_all
+								puts "The couch is #{@height} feet high, #{@length} feet long, and #{@width} feet wide."
 							end
 
 						end
 					</pre>
-				
+				The great thing about classes is you can use them to input data, and then be able to call the methods within the class on the object. That's what the initialize method is for. You put in the data, and then in converts what variables you put in into class variables (the ones with the @ symbol before them). These variables are only useable within the class. If I used @height somewhere not in the class, it will throw an error. This is also great because I can use whatever I want to name a class variable, without changing variables outside of the class. For example, I can create another class called Chair, and use @height however I want without it changing the @height variable in the Couch class! Thanks Ruby. Now let's use our class to input some data on some couches, and then call them later when we have our annual couch tetris game:
+					<pre>
+						couch1 = Couch.new(3, 7, 2.5)
+						couch2 = Couch.new(3, 9, 3)
+
+						couch2.get_length
+						=> 9
+
+						couch1.get_width
+						=> 2.5
+
+						couch2.get_all
+						=> The couch is 3 feet high, 9 feet long, and 3 feet wide.
+					</pre>
+				Looks good, time to start stacking!
 				</span></p>
 			</div>
 		</div>
