@@ -61,4 +61,6 @@ html {
 #blog-date {
 	font-size:.75em;
 }
-#blog {}
+pre {
+	text-align: left;
+}
