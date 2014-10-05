@@ -3,7 +3,7 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="http://dakotameadows.github.io/blog-stylesheet.css">
 		<title>
-			<!--Insert title here-->
+			Variable Scope
 		</title>
 	</head>
 	<body>
@@ -35,10 +35,19 @@
 				</ul>
 			</div>
 			<div id="writing">
-				<p><span id="blog-title"><!--Blog Title--></span></p>
-				<p><span id="blog-date"><!--Date Made--></span></p>
+				<p><span id="blog-title">Variable Scope</span></p>
+				<p><span id="blog-date">October 5, 2014</span></p>
 				<br>
-				<p><span id="blog"><!--BLOG ME!--></span></p>
+				<p><span id="blog">Variable Scope refers to where in a program the variable is accessible. Ruby has four types of variables (local, global, instance, and class) as well as a constant type of variable. In addition, there are two psuedo-variables which can't be assigned values (nil and self, which refers to the object currently being executed). Most of the time, just looking at the variable/code will tell you the scope of the variable, but if not, typing in "defined? variable" will tell you. for example: 
+					<pre>
+						@x = 20
+						=> 20
+
+						defined? @x
+						=> "instance-variable"
+					</pre>
+				
+				</span></p>
 			</div>
 		</div>
 	</body>
