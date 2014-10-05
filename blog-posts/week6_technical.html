@@ -38,7 +38,7 @@
 				<p><span id="blog-title">Variable Scope</span></p>
 				<p><span id="blog-date">October 5, 2014</span></p>
 				<br>
-				<p><span id="blog">Variable Scope refers to where in a program the variable is accessible. Ruby has four types of variables (local, global, instance, and class) as well as a constant type of variable. In addition, there are two psuedo-variables which can't be assigned values (nil and self, which refers to the object currently being executed). Most of the time, just looking at the variable/code will tell you the scope of the variable, but if not, typing in "defined? variable" will tell you. for example: 
+				<p><span id="blog">Variable Scope refers to where in a program the variable is accessible. Ruby has four types of variables (local, global, instance, and class) as well as a constant type of variable. In addition, there are two psuedo-variables which can't be assigned values (nil and self, which refers to the object currently being executed). Most of the time, just looking at the variable/code will tell you the scope of the variable, but if not, typing in "defined? variable" will tell you. For example: 
 					<pre>
 						@x = 20
 						=> 20
@@ -46,7 +46,73 @@
 						defined? @x
 						=> "instance-variable"
 					</pre>
-				
+				A local variable is local to the code construct in which they are declared. A variable declared inside a loop or method cannot be used outside of that loop or method. They must begin with either a lower case letter or underscore. 
+					<pre>
+						def loop
+							x = 5
+							x.times do
+								puts "Hello!"
+							end
+							defined? x
+							=> "local-variable"
+						end
+
+						defined? x
+						=> nil
+					</pre>
+				Global variables are accessible from anywhere in the Ruby program. These variables have a $ symbol before their name. It's best to avoid using global variables, since they can be changed from anywhere in the program and this can lead to headaches later when fixing bugs.
+					<pre>
+						$x = 5
+
+						def loop
+							$5.times do
+								puts "Ahoy!"
+							end
+						end
+					</pre>
+				Class variables are variables shared across all class instances. Think of them as global variables within just that class. So once again, be careful as this may throw off your code later. Class variables have @@ before their names.
+					<pre>
+						class Polygon
+							@@sides = 10
+							def self.sides
+								@@sides
+							end
+						end
+
+						puts Polygon.sides
+						=> 10
+
+						class Triangle < Polygon
+							@@sides = 3
+						end
+
+						puts Triangle.sides
+						=> 3
+						puts Polygon.sides
+						=> 3 #It changed!
+					</pre>
+				Instance variables are local to specific instances of class. They have a @ symbol before their name. Let's take the previous code and use instance variables rather than class variables:
+					<pre>
+						class Polygon
+							@sides = 10
+							def self.sides
+								@sides
+							end
+						end
+
+						puts Polygon.sides
+						=> 10
+
+						class Triangle < Polygon
+							@sides = 3
+						end
+
+						puts Triangle.sides
+						=> 3
+						puts Polygon.sides
+						=> 10 #Stayed the same!
+					</pre>
+				The last variables are constants. Although their values can be changed, I wouldn't recommend it, and therefore am not showing you how!
 				</span></p>
 			</div>
 		</div>
